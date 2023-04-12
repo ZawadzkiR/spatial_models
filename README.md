@@ -1,5 +1,10 @@
 ## Class GW_RandomForestRegressor
 The GW_RandomForestRegressor class is a regression model based on a combination of global and local random forest models. Performs global regression on the entire data and local regression on each point using a weighted bi-square kernel to select neighboring points. It uses scikit-learn RandomForestRegressor to build global and local models. The code was rewritten from R to python based on the SpatialML library in R, which has the function of the Geographically Weighted Random Forest model. https://github.com/cran/SpatialML
+
+## Class GW_RandomForestClassifier
+The GW_RandomForestClassifier class is a classification model based on a combination of global and local random forest models. Performs global classification on the entire data and local classification on each point using a weighted bi-square kernel to select neighboring points. It uses scikit-learn RandomForestClassifier to build global and local models.
+
+
 ## Parameters
 **kernel**: string (default: adaptive) - Type of kernel to be used. Either 'adaptive' or 'fixed'.
 **bw**: float or int (default: 100) - Bandwidth for the kernel. If kernel='fixed', this value will be the maximum distance a point can be from the central point to be included in the local model. If kernel='adaptive', this value will be the number of neighbors included in the local model.
